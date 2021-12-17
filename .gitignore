@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# pyenv
+.python-version
+
+# Environments
+bin/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+pyvenv.cfg
+share/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+#pycharm
+.idea/*
+
+# Visual Studio Code
+.vscode/*
+
+# macOS
+*.DS_Store
+
+# all simulation data
+20*
+*.db
+
+#coverage
+.coverage
+htmlcov/
