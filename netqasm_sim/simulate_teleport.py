@@ -4,7 +4,8 @@ import time
 from argparse import ArgumentParser
 
 import netsquid as ns
-from squidasm.run.stack.config import LinkConfig, StackConfig, StackNetworkConfig
+from squidasm.run.stack.config import (LinkConfig, StackConfig,
+                                       StackNetworkConfig)
 
 import sweep_teleport as sweep
 from teleport import teleport
@@ -20,18 +21,10 @@ def command_sweep(args):
     cfg_file = get_config_file(args.config)
     num_times = args.num
 
-    if args.param == "fidelity":
-        sweep.sweep_fidelity(cfg_file=cfg_file, num_times=num_times)
-    elif args.param == "rate":
-        sweep.sweep_rate(cfg_file=cfg_file, num_times=num_times)
-    elif args.param == "gate_noise":
+    if args.param == "gate_noise":
         sweep.sweep_gate_noise(cfg_file=cfg_file, num_times=num_times)
     elif args.param == "gate_time":
         sweep.sweep_gate_time(cfg_file=cfg_file, num_times=num_times)
-    elif args.param == "T2":
-        sweep.sweep_t2(cfg_file=cfg_file, num_times=num_times)
-    elif args.param == "latency":
-        sweep.sweep_latency(cfg_file=cfg_file, num_times=num_times)
 
 
 def command_computation(args):
@@ -91,7 +84,7 @@ if __name__ == "__main__":
     sweep_parser.add_argument(
         "--param",
         type=str,
-        choices={"fidelity", "rate", "T2", "gate_noise", "gate_time", "latency"},
+        choices={"gate_noise", "gate_time"},
         required=True,
     )
     sweep_parser.add_argument("--num", type=int, default=1)

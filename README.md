@@ -2,6 +2,30 @@ Code and data used for the evaluation section of the [NetQASM paper](https://arx
 
 To run the code, [`netqasm`](https://github.com/QuTech-Delft/netqasm) and [`squidasm`](https://github.com/QuTech-Delft/squidasm) need to be installed.
 
+## Prerequisites
+The code uses the `netqasm` and `squidasm` Python packages. `squidasm` relies on [NetSquid](https://netsquid.org/).
+To install NetSquid, an account is needed. See the NetSquid website how this is done.
+
+Install `pandas` version 1.2.4:
+```
+pip install pandas==1.2.4
+```
+
+Install `netqasm` version 0.8.5:
+```
+pip install netqasm==0.8.5
+```
+
+Install `squidasm` version 0.8.3:
+```
+pip install squidasm==0.8.3 --extra-index-url https://pypi.netsquid.org
+```
+This will prompt for the username and password of your NetSquid account.
+
+
+
+After installation, the simulations can be run, as described below.
+
 ## Producing simulation data and plots
 
 Teleportation fidelity as a function of gate noise (Figure 11.a):
@@ -13,15 +37,15 @@ $ python netqasm_sim/plot_teleport.py --param gate_noise
 
 Teleportation fidelity as a function of gate duration (Figure 11.b):
 ```
-$  python netqasm_sim/simulate_teleport.py sweep --param gate_time --config teleport_cfg1 --num <NUM_ITERATIONS>
-$  python netqasm_sim/plot_teleport.py --param gate_time
+$ python netqasm_sim/simulate_teleport.py sweep --param gate_time --config teleport_cfg1 --num <NUM_ITERATIONS>
+$ python netqasm_sim/plot_teleport.py --param gate_time
 ```
 
 
 BQC error rate as a function of gate noise (Figure 13):
 ```
-$  python netqasm_sim/simulate_bqc.py sweep --param gate_noise_trap --config near_perfect_nv --num <NUM_ITERATIONS>
-$  python netqasm_sim/plot_bqc.py --param gate_noise_trap
+$ python netqasm_sim/simulate_bqc.py sweep --param gate_noise_trap --config near_perfect_nv --num <NUM_ITERATIONS>
+$ python netqasm_sim/plot_bqc.py --param gate_noise_trap
 ```
 
 The simulation data that was used to create the plots in the paper is in the `final_data` directory.

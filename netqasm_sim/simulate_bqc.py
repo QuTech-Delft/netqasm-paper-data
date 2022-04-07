@@ -39,32 +39,10 @@ def command_sweep(args):
     num_times = args.num
     log_level = args.log_level
 
-    if args.param == "fidelity":
-        sweep.sweep_fidelity(
-            cfg_file=cfg_file, num_times=num_times, log_level=log_level
-        )
-    elif args.param == "rate":
-        sweep.sweep_rate(cfg_file=cfg_file, num_times=num_times, log_level=log_level)
-    elif args.param == "gate_noise":
-        sweep.sweep_gate_noise(
-            cfg_file=cfg_file, num_times=num_times, log_level=log_level
-        )
-    elif args.param == "gate_noise_trap":
+    if args.param == "gate_noise_trap":
         sweep.sweep_gate_noise_error_rate(
             cfg_file=cfg_file, num_times=num_times, log_level=log_level
         )
-    elif args.param == "gate_time":
-        sweep.sweep_gate_time(
-            cfg_file=cfg_file, num_times=num_times, log_level=log_level
-        )
-    elif args.param == "gate_time_trap":
-        sweep.sweep_gate_time_error_rate(
-            cfg_file=cfg_file, num_times=num_times, log_level=log_level
-        )
-    elif args.param == "T2":
-        sweep.sweep_t2(cfg_file=cfg_file, num_times=num_times, log_level=log_level)
-    elif args.param == "latency":
-        sweep.sweep_latency(cfg_file=cfg_file, num_times=num_times, log_level=log_level)
 
 
 def command_test(args):
@@ -146,16 +124,7 @@ if __name__ == "__main__":
     sweep_parser.add_argument(
         "--param",
         type=str,
-        choices={
-            "fidelity",
-            "rate",
-            "T2",
-            "gate_noise",
-            "gate_noise_trap",
-            "gate_time",
-            "gate_time_trap",
-            "latency",
-        },
+        choices={"gate_noise_trap"},
         required=True,
     )
     sweep_parser.add_argument("--num", type=int, default=1)

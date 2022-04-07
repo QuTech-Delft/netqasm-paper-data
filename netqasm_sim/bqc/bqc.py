@@ -9,7 +9,8 @@ from netqasm.lang.ir import BreakpointAction
 from netsquid.qubits import ketstates, operators, qubitapi
 from netsquid.qubits.qubit import Qubit
 from pydynaa import EventExpression
-from squidasm.run.stack.config import LinkConfig, StackConfig, StackNetworkConfig
+from squidasm.run.stack.config import (LinkConfig, StackConfig,
+                                       StackNetworkConfig)
 from squidasm.run.stack.run import run
 from squidasm.sim.stack.common import LogManager
 from squidasm.sim.stack.csocket import ClassicalSocket
@@ -289,7 +290,7 @@ def computation_round(
 
     client_results, server_results = run(
         cfg, {"client": client_program, "server": server_program}, num_times=num_times
-    )
+    )--num
 
     durations = []
     for c_result, s_result in zip(client_results, server_results):
