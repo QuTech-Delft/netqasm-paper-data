@@ -1,6 +1,7 @@
 Code and data used for the evaluation section of the [NetQASM paper](https://arxiv.org/abs/2111.09823).
 
-To run the code, [`netqasm`](https://github.com/QuTech-Delft/netqasm) and [`squidasm`](https://github.com/QuTech-Delft/squidasm) need to be installed.
+To run the code, a specific version of the `netqasm` and `squidasm` packages are needed.
+These are provided as submodules in this repository.
 
 ## Prerequisites
 The code uses the `netqasm` and `squidasm` Python packages. `squidasm` relies on [NetSquid](https://netsquid.org/).
@@ -11,14 +12,16 @@ Install `pandas` version 1.2.4:
 pip install pandas==1.2.4
 ```
 
-Install `netqasm` version 0.8.5:
+Install `netqasm`:
 ```
-pip install netqasm==0.8.5
+cd netqasm
+make install
 ```
 
 Install `squidasm` version 0.8.3:
 ```
-pip install squidasm==0.8.3 --extra-index-url https://pypi.netsquid.org
+cd squidasm
+make install
 ```
 This will prompt for the username and password of your NetSquid account.
 
