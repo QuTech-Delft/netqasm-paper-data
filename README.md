@@ -21,12 +21,17 @@ cd netqasm
 make install
 ```
 
+Make sure you have two environment variables set with your NetSquid username and password:
+```
+export NETSQUIDPYPI_USER=<username>
+export NETSQUIDPYPI_PWD=password
+```
+
 Install `squidasm`:
 ```
 cd ../squidasm
 make install
 ```
-This will prompt for the username and password of your NetSquid account.
 
 
 
