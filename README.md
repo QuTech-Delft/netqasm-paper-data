@@ -15,20 +15,15 @@ git submodule update
 ```
 
 
-Install `pandas` version 1.2.4:
-```
-pip install pandas==1.2.4
-```
-
 Install `netqasm`:
 ```
 cd netqasm
 make install
 ```
 
-Install `squidasm` version 0.8.3:
+Install `squidasm`:
 ```
-cd squidasm
+cd ../squidasm
 make install
 ```
 This will prompt for the username and password of your NetSquid account.
