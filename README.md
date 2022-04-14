@@ -7,6 +7,14 @@ These are provided as submodules in this repository.
 The code uses the `netqasm` and `squidasm` Python packages. `squidasm` relies on [NetSquid](https://netsquid.org/).
 To install NetSquid, an account is needed. See the NetSquid website how this is done.
 
+Initialize the submodules:
+
+```
+git submodule init
+git submodule update
+```
+
+
 Install `pandas` version 1.2.4:
 ```
 pip install pandas==1.2.4
