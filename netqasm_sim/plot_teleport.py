@@ -46,11 +46,11 @@ def create_png(param_name):
     print(f"plot written to {output_path}")
 
 
-def plot_gate_noise():
+def plot_gate_noise(data: str):
     param_name = "gate_noise"
 
     data_path = os.path.join(
-        os.path.dirname(__file__), f"sweep_data_teleport/sweep_{param_name}.json"
+        os.path.dirname(__file__), f"sweep_data_teleport/sweep_{param_name}_{data}.json"
     )
 
     with open(data_path, "r") as f:
@@ -88,11 +88,11 @@ def plot_gate_noise():
     create_png(param_name)
 
 
-def plot_gate_time():
+def plot_gate_time(data: str):
     param_name = "gate_time"
 
     data_path = os.path.join(
-        os.path.dirname(__file__), f"sweep_data_teleport/sweep_{param_name}.json"
+        os.path.dirname(__file__), f"sweep_data_teleport/sweep_{param_name}_{data}.json"
     )
 
     with open(data_path, "r") as f:
@@ -137,19 +137,19 @@ def plot_gate_time():
     )
 
     ax.set_ylim(0.75, 0.9)
-    # ax.axhline(y=0.25, color="red", label="BQC threshold")
     ax.legend(loc="upper left")
     ax2.legend(loc="upper left", bbox_to_anchor=(0.0, 0.85))
-    # plt.tight_layout()
 
     create_png(param_name)
 
 
 def plot(args):
+    if args.data is None:
+        args.data = "LAST"
     if args.param == "gate_noise":
-        plot_gate_noise()
+        plot_gate_noise(args.data)
     elif args.param == "gate_time":
-        plot_gate_time()
+        plot_gate_time(args.data)
 
 
 if __name__ == "__main__":
@@ -161,6 +161,7 @@ if __name__ == "__main__":
         choices={"fidelity", "rate", "T2", "gate_noise", "gate_time", "latency"},
         required=True,
     )
+    parser.add_argument("--data", type=str, required=False)
 
     args = parser.parse_args()
     args.func(args)

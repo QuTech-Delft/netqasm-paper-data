@@ -48,4 +48,9 @@ $ python netqasm_sim/simulate_bqc.py sweep --param gate_noise_trap --config near
 $ python netqasm_sim/plot_bqc.py --param gate_noise_trap
 ```
 
+To also plot the fidelity of the remotely prepared states.
+```
+$ python netqasm_sim/plot_bqc.py --param gate_noise_epr_fidelity
+```
+
 The simulation data that was used to create the plots in the paper is in the `final_data` directory.

@@ -1,0 +1,186 @@
+{
+    "vanilla": [
+        {
+            "sweep_value": 0.0,
+            "error_rate": 0.375,
+            "std_err": 0.1711632992203644,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9328794523122279,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.011111111111111112,
+            "error_rate": 0.5,
+            "std_err": 0.17677669529663687,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.912809347465567,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.022222222222222223,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.893467968302498,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.03333333333333333,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8748362424176328,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.044444444444444446,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8568952344243537,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.05555555555555556,
+            "error_rate": 0.375,
+            "std_err": 0.1711632992203644,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8396265992656622,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.06666666666666667,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8230120182951413,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.07777777777777778,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8070337427034088,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.08888888888888889,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.7916739991800457,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.1,
+            "error_rate": 0.5,
+            "std_err": 0.17677669529663687,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.7769156771467864,
+            "epr_fid2_std_err": 0.0
+        }
+    ],
+    "nv": [
+        {
+            "sweep_value": 0.0,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9332873196051263,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.011111111111111112,
+            "error_rate": 0.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9201811508082728,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.022222222222222223,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9073397606652316,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.03333333333333333,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8947604946702639,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.044444444444444446,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8824406821497395,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.05555555555555556,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.870377627084787,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.06666666666666667,
+            "error_rate": 0.125,
+            "std_err": 0.11692679333668567,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8585686652702954,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.07777777777777778,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8470111165845134,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.08888888888888889,
+            "error_rate": 0.375,
+            "std_err": 0.1711632992203644,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8357023249518701,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.1,
+            "error_rate": 0.25,
+            "std_err": 0.15309310892394862,
+            "epr_fid1": 0.9333333333333322,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8246395891358067,
+            "epr_fid2_std_err": 0.0
+        }
+    ]
+}

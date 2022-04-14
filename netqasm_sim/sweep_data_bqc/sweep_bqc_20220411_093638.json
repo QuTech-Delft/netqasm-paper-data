@@ -1,0 +1,186 @@
+{
+    "vanilla": [
+        {
+            "sweep_value": 0.0,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9328705937368265,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.011111111111111112,
+            "error_rate": 0.5,
+            "std_err": 0.25,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.911651631846726,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.022222222222222223,
+            "error_rate": 0.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8912629552301686,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.03333333333333333,
+            "error_rate": 0.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8716803366495897,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.044444444444444446,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8528800219849064,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.05555555555555556,
+            "error_rate": 0.5,
+            "std_err": 0.25,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8348387052789733,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.06666666666666667,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8175335562583848,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.07777777777777778,
+            "error_rate": 0.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8009421620603662,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.08888888888888889,
+            "error_rate": 0.5,
+            "std_err": 0.25,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.7850426027084149,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.1,
+            "error_rate": 1.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.7698133664303154,
+            "epr_fid2_std_err": 0.0
+        }
+    ],
+    "nv": [
+        {
+            "sweep_value": 0.0,
+            "error_rate": 0.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9332413403750549,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.011111111111111112,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.9213135313017019,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.022222222222222223,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.909597891438034,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.03333333333333333,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8980926323626103,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.044444444444444446,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8867959676268122,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.05555555555555556,
+            "error_rate": 0.0,
+            "std_err": 0.0,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8757061157991782,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.06666666666666667,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.864821294402533,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.07777777777777778,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8541397331033398,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.08888888888888889,
+            "error_rate": 0.75,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8436596246167224,
+            "epr_fid2_std_err": 0.0
+        },
+        {
+            "sweep_value": 0.1,
+            "error_rate": 0.25,
+            "std_err": 0.21650635094610965,
+            "epr_fid1": 0.9333333333333333,
+            "epr_fid1_std_err": 0.0,
+            "epr_fid2": 0.8333792091619148,
+            "epr_fid2_std_err": 0.0
+        }
+    ]
+}

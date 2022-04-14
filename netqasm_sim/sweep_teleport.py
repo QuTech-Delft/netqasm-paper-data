@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import math
 import os
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Tuple
 
@@ -22,11 +23,18 @@ COMPILE_VERSIONS = ["meas_epr_first", "meas_epr_last"]
 
 def dump_data(data: Any, filename: str) -> None:
     output_dir = os.path.join(os.path.dirname(__file__), "sweep_data_teleport")
+    now = datetime.now()
+    timestamp = now.strftime("%Y%m%d_%H%M%S")
+    filename_timestamp = f"{filename}_{timestamp}"
+    filename_last = f"{filename}_LAST.json"
     Path(output_dir).mkdir(parents=True, exist_ok=True)
-    path = os.path.join(output_dir, filename)
-    with open(path, "w") as f:
-        json.dump(data, f)
-    print(f"data written to {path}")
+    path_timestamp = os.path.join(output_dir, filename_timestamp)
+    path_last = os.path.join(output_dir, filename_last)
+    with open(path_timestamp, "w") as f:
+        json.dump(data, f, indent=4)
+    with open(path_last, "w") as f:
+        json.dump(data, f, indent=4)
+    print(f"data written to {path_timestamp} and {path_last}")
 
 
 def get_avg_fidelity(
@@ -129,7 +137,7 @@ def sweep_gate_noise(cfg_file: str, num_times: int) -> None:
                 }
             )
 
-    dump_data(data, "sweep_gate_noise.json")
+    dump_data(data, "sweep_gate_noise")
 
 
 def sweep_gate_time(cfg_file: str, num_times: int) -> None:
@@ -168,5 +176,5 @@ def sweep_gate_time(cfg_file: str, num_times: int) -> None:
                 }
             )
 
-    dump_data(data, "sweep_gate_time.json")
+    dump_data(data, "sweep_gate_time")
 

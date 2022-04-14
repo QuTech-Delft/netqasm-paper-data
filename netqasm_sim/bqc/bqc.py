@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass
-from typing import Any, Dict, Generator
+from typing import Any, Dict, Generator, List, Tuple
 
 import netsquid as ns
-from netqasm.lang.ir import BreakpointAction
+from netqasm.lang.ir import BreakpointAction, BreakpointRole
 from netsquid.qubits import ketstates, operators, qubitapi
 from netsquid.qubits.qubit import Qubit
 from pydynaa import EventExpression
@@ -97,6 +97,9 @@ class ClientProgram(Program):
             epr2.rot_Z(angle=self._theta1)
             epr2.H()
             p1 = epr2.measure(store_array=False)
+        conn.insert_breakpoint(
+            BreakpointAction.DUMP_GLOBAL_STATE, role=BreakpointRole.RECEIVE
+        )
 
         yield from conn.flush()
 
@@ -120,11 +123,18 @@ class ClientProgram(Program):
             )
         csocket.send_float(delta2)
 
-        conn.insert_breakpoint(BreakpointAction.DUMP_GLOBAL_STATE)
         yield from conn.flush()
 
         end_time = ns.sim_time()
-        return {"p1": p1, "p2": p2, "start_time": start_time, "end_time": end_time}
+        return {
+            "p1": p1,
+            "p2": p2,
+            "theta1": self._theta1,
+            "theta2": self._theta2,
+            "dummy": self._dummy,
+            "start_time": start_time,
+            "end_time": end_time,
+        }
 
     def run(
         self, context: ProgramContext
@@ -162,6 +172,9 @@ class ServerProgram(Program):
 
         epr1 = epr_socket.recv()[0]
         epr2 = epr_socket.recv()[0]
+        # for _ in range(10):
+        #     epr1.cnot(epr2)
+        conn.insert_breakpoint(BreakpointAction.DUMP_GLOBAL_STATE)
         epr2.cphase(epr1)
 
         yield from conn.flush()
@@ -182,21 +195,25 @@ class ServerProgram(Program):
         epr1.rot_Z(angle=delta2)
         epr1.H()
 
-        conn.insert_breakpoint(BreakpointAction.DUMP_GLOBAL_STATE)
         m2 = epr1.measure(store_array=False)
         yield from conn.flush()
 
         # m2 = int(m2)
         # return {"m1": m1, "m2": m2}
         all_states = GlobalSimData.get_last_breakpoint_state()
-        # print(f"all_states: {all_states}")
-        state = all_states["server"][1]
+        epr_states = all_states["server"]
+        epr1 = epr_states[0]  # created second, still in qubit 0
+        epr2 = epr_states[1]  # created first, moved to qubit 1
+        # print(f"epr1:\n{epr1}")
+        # print(f"epr2:\n{epr2}")
+        # state = all_states["server"][1]
 
         end_time = ns.sim_time()
         return {
             "m1": m1,
             "m2": m2,
-            "state": state,
+            "epr1": epr1,
+            "epr2": epr2,
             "start_time": start_time,
             "end_time": end_time,
         }
@@ -217,6 +234,35 @@ class BqcResult:
     fail_rate: float
     state: Qubit
     m1: int
+
+
+def expected_rsp_state(theta: float, p: int, dummy: bool):
+    expected = qubitapi.create_qubits(1)[0]
+
+    if dummy:
+        if p == 0:
+            qubitapi.assign_qstate(expected, ketstates.s0)
+        elif p == 1:
+            qubitapi.assign_qstate(expected, ketstates.s1)
+    else:
+        if (theta, p) == (0, 0):
+            qubitapi.assign_qstate(expected, ketstates.h0)
+        elif (theta, p) == (0, 1):
+            qubitapi.assign_qstate(expected, ketstates.h1)
+        if (theta, p) == (PI_OVER_2, 0):
+            qubitapi.assign_qstate(expected, ketstates.y0)
+        elif (theta, p) == (PI_OVER_2, 1):
+            qubitapi.assign_qstate(expected, ketstates.y1)
+        if (theta, p) == (PI, 0):
+            qubitapi.assign_qstate(expected, ketstates.h1)
+        elif (theta, p) == (PI, 1):
+            qubitapi.assign_qstate(expected, ketstates.h0)
+        if (theta, p) == (-PI_OVER_2, 0):
+            qubitapi.assign_qstate(expected, ketstates.y1)
+        elif (theta, p) == (-PI_OVER_2, 1):
+            qubitapi.assign_qstate(expected, ketstates.y0)
+        
+    return expected
 
 
 def expected_state(alpha: float, beta: float):
@@ -290,7 +336,7 @@ def computation_round(
 
     client_results, server_results = run(
         cfg, {"client": client_program, "server": server_program}, num_times=num_times
-    )--num
+    )
 
     durations = []
     for c_result, s_result in zip(client_results, server_results):
@@ -323,7 +369,7 @@ def trap_round(
     theta2: float = 0.0,
     dummy: int = 1,
     compile_version: str = "None",
-) -> BqcResult:
+) -> Tuple[float, List[float], List[float], List[float]]:
     client_program = ClientProgram(
         alpha=alpha,
         beta=beta,
@@ -343,8 +389,30 @@ def trap_round(
 
     p1s = [result["p1"] for result in client_results]
     p2s = [result["p2"] for result in client_results]
+    theta1s = [result["theta1"] for result in client_results]
+    theta2s = [result["theta2"] for result in client_results]
+    dummies = [result["dummy"] for result in client_results]
     m1s = [result["m1"] for result in server_results]
     m2s = [result["m2"] for result in server_results]
+    epr1s = [result["epr1"] for result in server_results]
+    epr2s = [result["epr2"] for result in server_results]
+
+    # print(f"p1s: {p1s}")
+    # print(f"p2s: {p2s}")
+    # print(f"theta1s: {theta1s}")
+    # print(f"theta2s: {theta2s}")
+    # print(f"dummies: {dummies}")
+    # print(f"epr1s: {epr1s}")
+    # print(f"epr2s: {epr2s}")
+
+    fid1s = [
+        qubitapi.fidelity(expected_rsp_state(theta, p, dummy == 1), epr, squared=True)
+        for epr, theta, p, dummy in zip(epr1s, theta1s, p1s, dummies)
+    ]
+    fid2s = [
+        qubitapi.fidelity(expected_rsp_state(theta, p, dummy == 2), epr, squared=True)
+        for epr, theta, p, dummy in zip(epr2s, theta2s, p2s, dummies)
+    ]
 
     assert dummy in [1, 2]
     if dummy == 1:
@@ -363,7 +431,7 @@ def trap_round(
 
     last_m1 = m1s[-1]
     # return BqcResult(dist_0=-1, dist_1=-1, fail_rate=frac_fail, state=None, m1=last_m1)
-    return frac_fail, durations
+    return frac_fail, durations, fid1s, fid2s
 
 
 def test_perfect_config():
@@ -426,9 +494,10 @@ def n_trap_rounds(
     compile_version: str = "None",
 ) -> None:
     LogManager.set_log_level(log_level)
+    LogManager.log_to_file("dump.log")
 
     cfg = StackNetworkConfig.from_file(cfg_file)
-    error_rate, durations = trap_round(
+    error_rate, durations, fid1s, fid2s = trap_round(
         cfg,
         n,
         theta1=theta1,
@@ -437,3 +506,5 @@ def n_trap_rounds(
         compile_version=compile_version,
     )
     print(f"error rate: {error_rate}")
+    print(f"fidelities of EPR 1: {fid1s}")
+    print(f"fidelities of EPR 2: {fid2s}")

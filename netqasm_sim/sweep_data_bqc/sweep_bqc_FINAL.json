@@ -1,0 +1,190 @@
+{
+    "vanilla": [
+        {
+            "sweep_value": 0.0,
+            "error_rate": 0.1235,
+            "std_err": 0.002165063509461099,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.9328705913380261,
+            "epr_fid2_std_err": 1.176112032094271e-10
+        },
+        {
+            "sweep_value": 0.011111111111111112,
+            "error_rate": 0.17500000000000002,
+            "std_err": 0.0061032778078668505,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.9116516272886972,
+            "epr_fid2_std_err": 8.808403627571151e-11
+        },
+        {
+            "sweep_value": 0.022222222222222223,
+            "error_rate": 0.191,
+            "std_err": 0.009604686356149273,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.891262956462669,
+            "epr_fid2_std_err": 9.968534110005305e-11
+        },
+        {
+            "sweep_value": 0.03333333333333333,
+            "error_rate": 0.2155,
+            "std_err": 0.007885905147793753,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8716803411959305,
+            "epr_fid2_std_err": 1.1495091097530153e-10
+        },
+        {
+            "sweep_value": 0.044444444444444446,
+            "error_rate": 0.239,
+            "std_err": 0.00687386354243376,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8528800227500158,
+            "epr_fid2_std_err": 8.569833137052441e-11
+        },
+        {
+            "sweep_value": 0.05555555555555556,
+            "error_rate": 0.263,
+            "std_err": 0.010404326023342401,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8348387083603275,
+            "epr_fid2_std_err": 1.0029102042746915e-10
+        },
+        {
+            "sweep_value": 0.06666666666666667,
+            "error_rate": 0.28850000000000003,
+            "std_err": 0.009549214627392137,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8175335533595307,
+            "epr_fid2_std_err": 1.0544064770335163e-10
+        },
+        {
+            "sweep_value": 0.07777777777777778,
+            "error_rate": 0.305,
+            "std_err": 0.00743303437365926,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8009421620312055,
+            "epr_fid2_std_err": 1.3125597014310698e-10
+        },
+        {
+            "sweep_value": 0.08888888888888889,
+            "error_rate": 0.334,
+            "std_err": 0.013360389215887388,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.7850426006840546,
+            "epr_fid2_std_err": 1.2721542888086913e-10
+        },
+        {
+            "sweep_value": 0.1,
+            "error_rate": 0.348,
+            "std_err": 0.01419506956657839,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.7698133666910726,
+            "epr_fid2_std_err": 1.168168488938936e-10
+        }
+    ],
+    "nv": [
+        {
+            "sweep_value": 0.0,
+            "error_rate": 0.1255,
+            "std_err": 0.003561951712193755,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.9332413405261079,
+            "epr_fid2_std_err": 1.351298781632318e-10
+        },
+        {
+            "sweep_value": 0.011111111111111112,
+            "error_rate": 0.14550000000000002,
+            "std_err": 0.002947456530637895,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.9213135303557193,
+            "epr_fid2_std_err": 8.529430066642553e-11
+        },
+        {
+            "sweep_value": 0.022222222222222223,
+            "error_rate": 0.176,
+            "std_err": 0.0036742346141747646,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.9095978911896789,
+            "epr_fid2_std_err": 9.231586705672123e-11
+        },
+        {
+            "sweep_value": 0.03333333333333333,
+            "error_rate": 0.1975,
+            "std_err": 0.007495832175282476,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8980926307183094,
+            "epr_fid2_std_err": 1.244321787561269e-10
+        },
+        {
+            "sweep_value": 0.044444444444444446,
+            "error_rate": 0.22149999999999997,
+            "std_err": 0.007790218225441439,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8867959674945882,
+            "epr_fid2_std_err": 1.1605722581339894e-10
+        },
+        {
+            "sweep_value": 0.05555555555555556,
+            "error_rate": 0.22699999999999998,
+            "std_err": 0.008200609733428363,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8757061141199748,
+            "epr_fid2_std_err": 9.443786033070663e-11
+        },
+        {
+            "sweep_value": 0.06666666666666667,
+            "error_rate": 0.267,
+            "std_err": 0.006103277807866847,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8648212956672294,
+            "epr_fid2_std_err": 6.053768291511486e-11
+        },
+        {
+            "sweep_value": 0.07777777777777778,
+            "error_rate": 0.28,
+            "std_err": 0.009354143466934849,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8541397327318676,
+            "epr_fid2_std_err": 1.1410362017597038e-10
+        },
+        {
+            "sweep_value": 0.08888888888888889,
+            "error_rate": 0.2995,
+            "std_err": 0.0086421930087218,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8436596252813583,
+            "epr_fid2_std_err": 7.173650221906679e-11
+        },
+        {
+            "sweep_value": 0.1,
+            "error_rate": 0.31000000000000005,
+            "std_err": 0.010770329614269006,
+            "epr_fid1": 0.9333333333333363,
+            "epr_fid1_std_err": 1.3405684427535275e-16,
+            "epr_fid2": 0.8333792078401198,
+            "epr_fid2_std_err": 9.395795883784841e-11
+        }
+    ],
+    "meta": {
+        "config": "{\"stacks\": [{\"name\": \"client\", \"qdevice_typ\": \"nv\", \"qdevice_cfg\": {\"num_qubits\": 3, \"electron_init_depolar_prob\": 0, \"electron_single_qubit_depolar_prob\": 0.0, \"prob_error_0\": 0, \"prob_error_1\": 0, \"carbon_init_depolar_prob\": 0, \"carbon_z_rot_depolar_prob\": 0, \"ec_gate_depolar_prob\": 0.1, \"electron_T1\": 3600000000000, \"electron_T2\": 1460000000, \"carbon_T1\": 36000000000000, \"carbon_T2\": 1000000000, \"carbon_init\": 310000, \"carbon_rot_x\": 500000, \"carbon_rot_y\": 500000, \"carbon_rot_z\": 5, \"electron_init\": 2000, \"electron_rot_x\": 5, \"electron_rot_y\": 5, \"electron_rot_z\": 5, \"ec_controlled_dir_x\": 500000, \"ec_controlled_dir_y\": 500000, \"measure\": 3700}, \"classical_cfg\": {\"host_qnos_latency\": 100000.0}}, {\"name\": \"server\", \"qdevice_typ\": \"nv\", \"qdevice_cfg\": {\"num_qubits\": 3, \"electron_init_depolar_prob\": 0, \"electron_single_qubit_depolar_prob\": 0.0, \"prob_error_0\": 0, \"prob_error_1\": 0, \"carbon_init_depolar_prob\": 0, \"carbon_z_rot_depolar_prob\": 0, \"ec_gate_depolar_prob\": 0.1, \"electron_T1\": 3600000000000, \"electron_T2\": 1460000000, \"carbon_T1\": 36000000000000, \"carbon_T2\": 1000000000, \"carbon_init\": 310000, \"carbon_rot_x\": 500000, \"carbon_rot_y\": 500000, \"carbon_rot_z\": 5, \"electron_init\": 2000, \"electron_rot_x\": 5, \"electron_rot_y\": 5, \"electron_rot_z\": 5, \"ec_controlled_dir_x\": 500000, \"ec_controlled_dir_y\": 500000, \"measure\": 3700}, \"classical_cfg\": {\"host_qnos_latency\": 100000.0}}], \"links\": [{\"stack1\": \"client\", \"stack2\": \"server\", \"typ\": \"depolarise\", \"cfg\": {\"fidelity\": 0.9, \"prob_success\": 0.5, \"t_cycle\": 10000.0}, \"classical_cfg\": null}]}",
+        "num_times": 500
+    }
+}
