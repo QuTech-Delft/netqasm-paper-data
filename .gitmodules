@@ -1,0 +1,6 @@
+[submodule "netqasm"]
+	path = netqasm
+	url = https://github.com/QuTech-Delft/netqasm/
+[submodule "squidasm"]
+	path = squidasm
+	url = https://github.com/QuTech-Delft/squidasm
