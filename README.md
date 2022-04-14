@@ -1,19 +1,24 @@
 Code and data used for the evaluation section of the [NetQASM paper](https://arxiv.org/abs/2111.09823).
 
-To run the code, a specific version of the `netqasm` and `squidasm` packages are needed.
-These are provided as submodules in this repository.
 
 ## Prerequisites
-The code uses the `netqasm` and `squidasm` Python packages. `squidasm` relies on [NetSquid](https://netsquid.org/).
+To run the code, a specific version of the `netqasm` and `squidasm` packages are needed.
+These are provided as submodules in this repository.
+`squidasm` relies on [NetSquid](https://netsquid.org/).
 To install NetSquid, an account is needed. See the NetSquid website how this is done.
 
-Initialize the submodules:
+### Installation
+First clone this repository:
+```
+git clone https://github.com/QuTech-Delft/netqasm-paper-data
+cd netqasm-paper-data
+```
 
+Initialize the submodules:
 ```
 git submodule init
 git submodule update
 ```
-
 
 Install `netqasm`:
 ```
@@ -21,7 +26,8 @@ cd netqasm
 make install
 ```
 
-Make sure you have two environment variables set with your NetSquid username and password:
+Make sure you have two environment variables set with your NetSquid username and password.
+These are needed for the installation of squidasm.
 ```
 export NETSQUIDPYPI_USER=<username>
 export NETSQUIDPYPI_PWD=password
@@ -33,9 +39,7 @@ cd ../squidasm
 make install
 ```
 
-
-
-After installation, the simulations can be run, as described below.
+After installation, the simulations can be run as described below.
 
 ## Producing simulation data and plots
 
@@ -59,7 +63,7 @@ $ python netqasm_sim/simulate_bqc.py sweep --param gate_noise_trap --config near
 $ python netqasm_sim/plot_bqc.py --param gate_noise_trap
 ```
 
-To also plot the fidelity of the remotely prepared states.
+To also plot the fidelity of the remotely prepared states (Figure 14):
 ```
 $ python netqasm_sim/plot_bqc.py --param gate_noise_epr_fidelity
 ```
